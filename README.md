@@ -11,11 +11,11 @@ allprojects {
 ```
 If the above don't work then, add in `settings.gradle`
 ```
-pluginManagement {
+dependencyResolutionManagement {
+  repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
   repositories {
-    gradlePluginPortal()
     google()
-    maven { url 'https://jitpack.io' }
+    maven{ url 'https://jitpack.io' }
     mavenCentral()
   }
 }
