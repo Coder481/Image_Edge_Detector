@@ -60,5 +60,4 @@ dependencies {
     implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
 
-    implementation 'com.github.Coder481:Image_Edge_Detector:1.1'
 }
