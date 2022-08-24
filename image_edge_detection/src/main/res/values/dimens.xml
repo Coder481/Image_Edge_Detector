@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="display_images_max_size_limit">400dp</dimen>
+    <dimen name="display_images_min_size_limit">100dp</dimen>
+</resources>

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Image_EdgeDetector</string>
+
+    <string name="gallery">Gallery</string>
+    <string name="camera">Camera</string>
+    <string name="selectImage">Select Image</string>
+    <string name="genImage">Generate Image</string>
+</resources>

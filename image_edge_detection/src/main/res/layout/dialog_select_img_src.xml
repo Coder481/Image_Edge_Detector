@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:padding="16dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Source"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <RadioGroup
+        android:id="@+id/rg_chooseSrc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <RadioButton
+            android:id="@+id/rb_phoneStorage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Local Storage"
+            android:layout_weight="1"/>
+        <RadioButton
+            android:id="@+id/rb_link"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Custom link"
+            android:layout_weight="1"/>
+
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lay_localStrg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/rg_chooseSrc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectFromCamera"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/camera"
+            app:strokeColor="@color/white"
+            android:drawableTop="@drawable/ic_camera"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/selectFromGallery"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/selectFromGallery"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gallery"
+            android:drawableTop="@drawable/ic_photo_album"
+            app:strokeColor="@color/white"
+            app:layout_constraintTop_toTopOf="@id/selectFromCamera"
+            app:layout_constraintBottom_toBottomOf="@id/selectFromCamera"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/selectFromCamera" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/lay_customLink"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/rg_chooseSrc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/til_link"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/tie_link"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:maxLines="1"
+                android:inputType="text"
+                android:hint="Enter link"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/btn_sendLink"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:elevation="6dp"
+            android:text="Select"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/colorPrimary"
+            app:layout_constraintStart_toStartOf="@id/til_link"
+            app:layout_constraintEnd_toEndOf="@id/til_link"
+            app:layout_constraintTop_toBottomOf="@id/til_link"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
