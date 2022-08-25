@@ -122,7 +122,10 @@ class ViewModel : ViewModel(){
      */
     fun fetchImagesList(){
         viewModelScope.launch {
-            if(auth.currentUser == null) return@launch
+            if(auth.currentUser == null) {
+                orgImagesList.postValue(emptyList())
+                return@launch
+            }
 
             val listRef = firebaseStorage.reference.child("${auth.uid}")
             listRef.listAll()
@@ -143,6 +146,7 @@ class ViewModel : ViewModel(){
                     }
                 }
                 .addOnFailureListener {
+                    orgImagesList.postValue(emptyList())
                     Log.e("-----Fetch Error-----",it.toString())
                 }
         }
