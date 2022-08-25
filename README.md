@@ -1,5 +1,8 @@
 ## How to add in your project:
 
+### Download APK from [here](https://github.com/Coder481/Image_Edge_Detector/releases/download/1.2.1/app-debug.apk)
+### [Here](https://github.com/Coder481/Test_Project) is the project that implement this library.
+
 [![](https://jitpack.io/v/Coder481/Image_Edge_Detector.svg)](https://jitpack.io/#Coder481/Image_Edge_Detector)
 
 1. Add the JitPack repository to your build file<br>
